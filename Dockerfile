@@ -1,5 +1,5 @@
-FROM openjdk:8u212-jdk-stretch
-MAINTAINER Futa HIRAKOBA
+FROM openjdk:21-jdk-bookworm
+LABEL maintainer="Shota TAKAKURA"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -23,5 +23,9 @@ RUN make clean all
 RUN mkdir /work/libs && mv libpict.so /work/libs
 
 WORKDIR /work/pict-java
+
+RUN apt-get install -y ca-certificates && \
+    rm -rf /var/lib/apt/lists/* && \
+    update-ca-certificates
 
 RUN ./gradlew jar
