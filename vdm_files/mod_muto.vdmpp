@@ -1,0 +1,15 @@
+class 記号実行
+
+functions
+
+	func : nat -> seq of char
+		func(a) ==
+			if (a mod 4 = 0) then
+				if(a > 92) then
+					"a mod 4 = 0 かつ a > 92"
+				else
+					"a mod 4 = 0 かつ !(a > 92)"
+			else
+				"!(a mod 4 = 0)";
+
+end 記号実行

@@ -1,0 +1,19 @@
+class 遊園地チケット
+
+functions
+
+static public 割引判定 : nat * nat -> seq of char
+	割引判定 (a, b) ==
+		if(a + b <= 50) then
+			if(a + b <= 40) then
+				if(a + b - 20 >= 0) then
+					"20以上40以下"
+				else
+					"20未満"
+			else
+				"41以上50以下"
+		else
+			"51以上"
+	pre a >= 5 and b >= 5;
+
+end 遊園地チケット

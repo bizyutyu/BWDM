@@ -3,26 +3,74 @@ class problem_example
 
 types
 
-stack= token;
-prime_numbers = seq of int;
-initeger_numbers ::
-        positive_numbers : nat1
-        ZERO : int
-        negative_numbers : int;
+    test = nat
+    inv t == t <= 5000;
+    stack= token;
+    prime_numbers = seq of int;
+    initeger_numbers ::
+            positive_numbers : nat1
+            ZERO : int
+            negative_numbers : int;
+
+instance variables
+
+    private my_data : test :=500;
+    private my_data2 : test := 0;
+    inv my_data > 10 and my_data < 100;
+
+operations
+
+    addEven : nat ==> ()
+        addEven(a) == my_data := my_data + a * 2 +3
+        pre a mod 2 = 0 or a mod 3 = 0 and a <= 100
+        post my_data mod 2 = 0;
+
+    doubleData : () ==> ()
+        doubleData() == (my_data := my_data * 2;
+        my_data2 := 1)
+        pre my_data mod 2 = 0
+        post my_data mod 2 = my_data~ mod 2;
+
+--    checkData : test ==> seq of char
+--        checkData(a) ==
+--            if(a mod 2 = 0) then
+--                if(my_data mod 2 = 0) then
+--                    return "my_dataは入力と同じ偶数です"
+--                else
+--                    return "my_dataは入力とは違い奇数です"
+--            else
+--                if(my_data mod 2 = 0) then
+--                    return "my_dataは入力とは違い偶数です"
+--                else
+--                    return "my_dataは入力と同じ奇数です";
 
 functions
-
-problem_function : nat -> seq of char
-    problem_function(a) ==
-        if(a mod 4 = 0) then
-            if(a > 92) then
-      	    	 "96, 100, 104, ..."
-	    else
-	          "..., 84, 88, 92"
-	else
-	    "others"
-
-	pre a > 5
-	post 10 > a;
+--
+--    problem_function : test -> seq of char
+--        problem_function(a) ==
+--            if(a mod 4 = 0) then
+--                if(a > 92) then
+--          	    	 "96, 100, 104, ..."
+--        	    else
+--        	          "..., 84, 88, 92"
+--        	else
+--        	    "others"
+--
+--        pre a mod 2 = 1
+--    	post 10 > a;
+--
+--    mix_function : test * test -> seq of char
+--        mix_function(a, b) ==
+--            if(a mod 2 = 0) then
+--                if(b mod 2 = 0) then
+--                    "aとbはどちらも偶数です"
+--                else
+--                    "aは偶数で、bは奇数です"
+--        	else
+--                if(b mod 2 = 0) then
+--                    "aは奇数で、bは偶数です"
+--                else
+--                    "aとbはどちらも奇数です";
+--
 
 end problem_example

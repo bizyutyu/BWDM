@@ -2,10 +2,10 @@ class ProblemClass
 
 functions
 
-problemFunction : nat -> seq of char
-  problemFunction(a) ==
-    if(a mod 4 = 0) then
-      if(a > 92) then
+problemFunction : nat * nat -> seq of char
+  problemFunction(a, b) ==
+    if(a <= 2019) then
+      if(b = 4) then
         "a mod 4 = 0 and a > 92"
       else
         "a mod 4 = 0 and !(a > 92)"

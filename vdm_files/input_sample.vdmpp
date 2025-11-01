@@ -8,7 +8,7 @@ sampleFunction : int*nat -> seq of char
       if(-1 < a) then
         "a <= 10 and -1 < a"
       else if(b > 0) then
- 	"a <= 10 and !(-1 > a) and b > 0"
+	    "a <= 10 and !(-1 > a) and b > 0"
       else
         "a <= 10 and !(-1 > a) and !(b > 0)"
     else
@@ -18,4 +18,4 @@ sampleFunction : int*nat -> seq of char
     	"!(a <= 10) and !(b <= -3) and a < 20"
       else
         "!(a <= 10) and !(b <= -3) and !(a < 20)";
- end SampleClass
+end SampleClass

@@ -2,15 +2,18 @@ class hoge
 
 functions
 
-public func : int * nat-> seq of char
-func(a, b)==
-  if(a mod 5 = 0) then
-    if(b <= 10) then
-      "a5 && b<=5"
-    else
-      "a5"
-  else
-    "other";
+	public func : nat * nat -> seq of char
+		func(a, b) ==
+			if(a + b <= 50) then
+				if(a >= 18) then
+					if( b >= 16) then
+						"へい"
+					else
+     					"へい！"
+				else
+					"へいへいへい"
+			else
+				"other";
 
 end hoge
 
