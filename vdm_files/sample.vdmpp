@@ -2,11 +2,6 @@ class sampleClass
 
 functions
 
--- arg    a:int, b:nat
--- return seq of char
--- 戻り値の文字列には、その行が実行される際に引数aが満たす条件を記述した
--- ツールの処理と文字列の内容は無関係である
-
 sampleFunction : int*nat -> seq of char
 sampleFunction(a, b) ==
     if(a < 100) then

@@ -24,7 +24,7 @@ $ DYLD_LIBRARY_PATH=./libs java -Djna.library.path=./libs -Djava.library.path=./
 or
 
 ```bash
-$ gradle run -Pargs="./vdm_files/problem.vdmpp" 
+$ gradlew run -Pargs="./vdm_files/problem.vdmpp" 
 ```
 
 ## options
@@ -36,7 +36,7 @@ $ gradle run -Pargs="./vdm_files/problem.vdmpp"
 | -i | Info. of Symbolic Exe.  |
 | -b | Output ONLY testcases of BVA. |
 | -p | Output ONLY testcases of BVA with pairwise. |
-| -s | Output OHLY testcases of Symbolic Exe. |
+| -s | Output ONLY testcases of Symbolic Exe. |
 | -f | Output testcase into a file(default:display on console).|
 | -v | Version. |
 | -h | Help. |

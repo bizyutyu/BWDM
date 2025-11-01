@@ -1,0 +1,18 @@
+class 数値
+
+functions
+
+static public 数値比較 : int -> seq of char
+	数値比較 (arg1) ==
+		if(arg1 >= 0) then
+			if(arg1 >= 50) then
+				if(arg1 >= 100) then
+					"arg1 >= 100"
+				else
+					"50 <= arg1 < 100"
+			else
+				"0 <= arg1 < 50"
+		else
+			"arg1 < 0"
+
+end 数値

@@ -1,0 +1,26 @@
+class 平成生まれと令和生まれ 
+
+types
+	public 「年」 = nat;
+	public 「月」 = nat1
+	inv m == m <= 12;
+
+functions
+	生まれ判定 : 「年」 * 「月」 -> seq of char
+		生まれ判定(年, 月) ==
+		    if(年 <= 2019) then
+				if(月 < 4) then
+					"平成の早生まれ"
+				else
+					if(月 > 4) then
+						"令和の遅生まれ"
+					else
+						"平成の遅生まれ"
+		    else
+				if(月 < 4) then
+					"令和の早生まれ"
+				else
+					"令和の遅生まれ"
+	pre 年 > 1990;
+
+end 平成生まれと令和生まれ

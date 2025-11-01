@@ -1,0 +1,12 @@
+class 英語奨学金
+
+functions
+	public 英語奨学金 : nat * nat -> seq of char
+		英語奨学金(TOEIC点, TOEFL点) ==
+			if(TOEIC点 + TOEFL点 >= 900) then
+				"5万円"
+			else
+				"受給対象外"
+		pre TOEIC点 <= 990 and TOEFL点 <= 120;
+
+end 英語奨学金
